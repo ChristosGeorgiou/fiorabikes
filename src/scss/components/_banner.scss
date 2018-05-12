@@ -1,0 +1,62 @@
+.banner {
+  // height: 900px;
+    position: relative;
+    .screenshot {
+        max-width: 450px;
+        margin-bottom: 50px;
+    }
+    .btn {
+        background: #FFF;
+        color: $primary;
+        text-shadow: none;
+    }
+    h2 {
+        font-weight: 300;
+        font-size: 0.8em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    .intro-text {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        text-shadow: 1px 1px 1px #000;
+        .intro-lead-in {
+            @include serif-font;
+            font-style: italic;
+            font-size: 22px;
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+        .intro-heading {
+            @include heading-font;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 25px;
+            span {
+                width: 100%;
+            }
+        }
+    }
+    @media(min-width:768px) {
+        .intro-text {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            .intro-lead-in {
+                @include serif-font;
+                font-style: italic;
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 25px;
+            }
+            .intro-heading {
+                @include heading-font;
+                font-weight: 700;
+                font-size: 68px;
+                line-height: 75px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
