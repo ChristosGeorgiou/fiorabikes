@@ -1,34 +1,29 @@
-<div class="header-wrapper container">
-    <div class="header-content d-flex justify-content-center">
-        <div class="d-flex align-items-center">
-            <div class="logo-wrapper">
-                <img class="logo" src="/img/logo_big.png" alt="logo" />
-                <h1>FioraBikes</h1>
+<section class="odd">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-content d-flex align-items-center">
+                <div class="logo-wrapper">
+                    <h1>FioraBikes</h1>
+                    <img class="logo" src="/img/logo_big.png" alt="logo" />
+                </div>
+            </div>
+            <div class="header-social">
+                <a href="https://www.facebook.com/fiora.bikes" target="_blank" class="btn btn-link top-social">
+                    <span class="fa fa-facebook-square fa-3x" style="color:#FFF;"></span>
+                </a>
+            </div>
+            <div id="banner" class="header-carousel carousel slide img-thumbnail" data-ride="carousel">
+                <div class="carousel-inner">
+                    {{#each banners}}
+                    <div {{#unless @index}}class="carousel-item active" {{else}}class="carousel-item" {{/unless}}>
+                        <img class="d-block w-100" src="{{this}}">
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="carousel-footer">
+                    <img src="/img/overlay.png" alt="banner overlay">
+                </div>
             </div>
         </div>
     </div>
-    <div class="header-social">
-        <a href="https://www.facebook.com/fiora.bikes" target="_blank" class="btn btn-link top-social">
-            <span class="fa fa-facebook-square fa-3x" style="color:#FFF;"></span>
-        </a>
-    </div>
-    <div id="banner" class="header-carousel carousel slide mt-4 img-thumbnail" data-ride="carousel">
-        <ol class="carousel-indicators">
-            {{#each banners}}
-            <li data-target="#carousel-example-generic" data-slide-to="{{@index}}" {{#unless @index}}class="active" {{/unless}}></li>
-            {{/each}}
-        </ol>
-
-        <div class="carousel-inner">
-            {{#each banners}}
-            <div {{#unless @index}}class="carousel-item active" {{else}}class="carousel-item" {{/unless}}>
-                <img class="d-block w-100" src="{{this}}">
-            </div>
-            {{/each}}
-        </div>
-
-        <div class="carousel-footer">
-            <img src="/img/overlay.png" alt="banner overlay">
-        </div>
-    </div>
-</div>
+</section>
