@@ -1,5 +1,3 @@
 # FioraBikes
 
-Website for FioraBikes company
-
-Find it [here](https://fioranikes.gr/)
+Website for [fiorabikes](https://fiorabikes.gr/)
