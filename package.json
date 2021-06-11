@@ -1,23 +1,23 @@
 {
-  "name": "fiorabikes.gr",
+  "name": "@cgeosoft/fiorabikes",
   "version": "0.0.0",
-  "description": "fiorabikes.gr",
+  "description": "website for the fiorabikes service",
   "author": {
     "name": "Christos Georgiou",
     "email": "christos@cgeosoft.com",
-    "url": "http://cgeosoft.com"
+    "url": "https://cgeosoft.com"
   },
   "private": true,
   "scripts": {
-    "start:dev": "run-p build:watch serve",
+    "start": "run-p build:watch serve",
     "serve": "http-server ./dist",
     "build": "node build.js",
     "build:watch": "nodemon"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
     "dateformat": "^4.5.1",
     "handlebars-helpers": "^0.10.0",
+    "http-server": "^0.12.3",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
     "metalsmith-build-info": "^1.0.1",
@@ -33,10 +33,8 @@
     "metalsmith-register-helpers": "^0.4.1",
     "metalsmith-sass": "^1.7.0",
     "metalsmith-static": "0.0.5",
-    "npm-run-all": "^4.1.5"
-  },
-  "devDependencies": {
-    "http-server": "^0.12.3",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "startbootstrap-grayscale": "^7.0.1"
   }
 }

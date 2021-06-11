@@ -16,12 +16,18 @@ Metalsmith(__dirname)
   .metadata(metadata)
   .source("./src")
   .destination('./dist')
-  .ignore(["layouts", "assets"])
+  .ignore(["layouts", "public", "partials", "helpers"])
   .clean(true)
   .use(moveUp('pages/*'))
   .use(static([{
-    src: "src/assets",
+    src: "src/public",
     dest: "."
+  },{
+    src: "node_modules/startbootstrap-grayscale/node_modules/bootstrap/js/dist",
+    dest: "./vendor/bootstrap"
+  },{
+    src: "node_modules/startbootstrap-grayscale/dist/js",
+    dest: "./js"
   }]))
   .use(sass({
     outputDir: 'css/'
