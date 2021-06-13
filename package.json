@@ -9,7 +9,7 @@
   },
   "private": true,
   "scripts": {
-    "start:dev": "run-p build:watch serve",
+    "start": "run-p build:watch serve",
     "serve": "http-server ./dist",
     "build": "node build.js",
     "build:watch": "nodemon"
