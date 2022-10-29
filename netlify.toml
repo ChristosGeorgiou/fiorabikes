@@ -1,6 +1,7 @@
 [build]
   publish = "dist/"
-  command = "node build.js"
+  command = "npm run build"
+
 [[redirects]]
   from = "/.well-known/*"
   to = "/well-known/:splat"
