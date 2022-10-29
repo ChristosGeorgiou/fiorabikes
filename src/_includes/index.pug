@@ -1,0 +1,197 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title=header.title
+  meta(content=header.description name='description')
+  meta(content=header.author.name name='author')
+  meta(content='index,follow' name='robots')
+  meta(content=header.og.title property='og:title')
+  meta(content=header.og.description property='og:description')
+  meta(content=header.og.url property='og:url')
+  meta(content=header.og.logo property='og:image')
+  meta(content=header.og.type property='og:type')
+  // Favicon
+  link(rel='icon' type='image/x-icon' href='/favicon.ico')
+  // Font Awesome icons (free version)
+  script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js' crossorigin='anonymous')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css')
+  // Core theme CSS (includes Bootstrap)
+  link(href='/css/styles.css' rel='stylesheet')
+
+body
+
+  // Navigation
+  nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
+    .container
+      a.navbar-brand.js-scroll-trigger(href='#page-top') #{title}
+      button.navbar-toggler.navbar-toggler-end(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto.my-2.my-lg-0
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#about') About
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#services') Our Bikes
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#contact') Contact
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='https://www.facebook.com/fiora.bikes' target='_blank')
+              span.fab.fa-facebook
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='https://www.instagram.com/fiora_bikes' target='_blank')
+              span.fab.fa-instagram
+
+  // Masthead
+  header#about.masthead
+    .container.h-100
+      .row.h-100.align-items-center.justify-content-center.text-center
+        .col-lg-10.align-self-end
+          img.mb-4(src='/img/logo_big.png' alt='')
+          h1.text-white.font-weight-bold
+            | #{title}
+          hr.divider.my-4.mx-auto
+        .col-lg-8.align-self-baseline
+          p.text-white-75.font-weight-light.mb-3
+            | We are 3 brothers and one sister that decided to follow our passion for bikes!!!
+          p.text-white-75.font-weight-light.mb-3
+            | We provide bike rental service in Kefalonia island and our base is in Trapezaki area, which is
+            | at the south part of Kefalonia.
+          p.text-white-75.font-weight-light.mb-3
+            | We deliver bikes to hotels, rooms and villas all over the island.The delivery is free to the
+            | airport and to hotels , villas and rooms in a distance less than 15 kms from Trapezaki area.
+          a.btn.btn-primary.text-dark.btn-xl.js-scroll-trigger(href='#contact') Reserve your Bike
+
+  // Services
+  section#services.page-section
+    .container
+      h2.text-center.mt-0 Our Bikes
+      hr.divider.my-4.mx-auto
+      .d-flex.align-items-top.justify-content-center
+        each bicycle in bicycles.items
+          .intro-item.mx-2
+            img.rounded.img-fluid.mb-4(src=bicycle.image alt=bicycle.title)
+            .lead #{bicycle.title}
+            p.intro-description #{bicycle.description}
+      .row
+        .col-md-7
+          h4.lead Prices
+          .card
+            table.table.mb-0
+              thead
+                tr
+                  td &nbsp;
+                  td.text-center Cube AimPro
+                  td.text-center Ideal Nergetic
+                  td.text-center Ideal Citylife
+              tbody
+                tr
+                  th.text-end 1 day
+                  td.text-center 15 &euro;
+                  td.text-center 10&euro;
+                  td.text-center 10&euro;
+                tr
+                  th.text-end 2 days
+                  td.text-center 30&euro;
+                  td.text-center 20&euro;
+                  td.text-center 20&euro;
+                tr
+                  th.text-end 3 days
+                  td.text-center 45&euro;
+                  td.text-center 30&euro;
+                  td.text-center 30&euro;
+                tr
+                  th.text-end 4 days
+                  td.text-center 60&euro;
+                  td.text-center 40&euro;
+                  td.text-center 40&euro;
+                tr
+                  th.text-end 5 days
+                  td.text-center 70&euro;
+                  td.text-center 48&euro;
+                  td.text-center 48&euro;
+                tr
+                  th.text-end 6 days
+                  td.text-center 80&euro;
+                  td.text-center 56&euro;
+                  td.text-center 56&euro;
+                tr
+                  th.text-end 7 days
+                  td.text-center 90&euro;
+                  td.text-center 64&euro;
+                  td.text-center 64&euro;
+                tr
+                  th.text-end extra day
+                  td.text-center 10&euro;
+                  td.text-center 8&euro;
+                  td.text-center 8&euro;
+
+        .col-md-5
+          h4.lead Extras
+          .card
+            table.table.mb-0
+              tbody
+                tr
+                  th.text-end(style='width:200px') baby seat for bike
+                  td 2&euro;/day
+                tr
+                  th.text-end(style='width:200px') side bag
+                  td 1&euro;/day
+                tr
+                  th.text-end(style='width:200px') helmet
+                  td free
+                tr
+                  th.text-end(style='width:200px') bike lock
+                  td free
+                tr
+                  th.text-end(style='width:200px') inner tube
+                  td free
+                tr
+                  th.text-end(style='width:200px') tool change
+                  td free
+                tr
+                  th.text-end(style='width:200px') led lights
+                  td free
+                tr
+                  th.text-end(style='width:200px') hand air pump
+                  td free
+                tr
+                  th.text-end(style='width:200px') bottle cage
+                  td free
+  .text-center
+    img.img-fluid(src='/img/banners/03.jpg' alt='')
+
+  // Contact
+  section#contact.page-section.bg-dark.text-white
+    .container
+      .row.justify-content-center
+        .col-lg-8.text-center
+          h2.mt-0 Make your reservation
+          hr.divider.my-4.mx-auto
+          p.text-muted.mb-5 Contact us and we wil find the best bike that suits you
+
+      .d-flex.align-items-top.justify-content-center.mx-auto
+        a.mx-2.text-center(href="https://wa.me/306947915511" style="width:100px")
+          i.fab.fa-whatsapp.fa-3x.mb-3.text-muted
+          div whatsapp
+        a.mx-2.text-center(href="tel:00306947915511" style="width:100px")
+          i.fas.fa-mobile.fa-3x.mb-3.text-muted
+          div mobile
+        a.mx-2.text-center(href="mailto:info@fiorabikes.gr" style="width:100px")
+          i.fas.fa-envelope.fa-3x.mb-3.text-muted
+          div email
+
+  iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5279.062370359971!2d20.604536160958446!3d38.11811470253923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13676204c8e1ce73%3A0xa92b1072646a3a1!2sTrapezaki+beach!5e0!3m2!1sen!2sgr!4v1526130272209' width='100%' height='450' frameborder='0' style='border:0' allowfullscreen='')
+
+  // Footer
+  footer.bg-light.py-5
+    .container
+      .small.text-center.text-muted
+        | FioraBikes &copy; 2018 - All rights reserved - developed by
+        a(href='http://cgeosoft.com' target='_blank') cgeosoft
+
+  script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js')
+  script(src='js/scripts.js')
