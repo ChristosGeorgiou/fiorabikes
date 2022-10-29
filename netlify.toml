@@ -5,5 +5,3 @@
 [[redirects]]
   from = "/.well-known/*"
   to = "/well-known/:splat"
-
-[[env
