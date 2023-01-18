@@ -65,101 +65,115 @@ body
           a.btn.btn-primary.text-dark.btn-xl.js-scroll-trigger(href='#contact') Reserve your Bike
 
   // Services
+
+  section#services.page-section
+    .container
+      h2.text-center.mt-0 GUIDED MOUNTAIN BIKING FROM MOUNTAIN AINOS
+      hr.divider.my-4.mx-auto
+      p
+        | This mountain trip lasts about 3 hours and is ideal to get your mountain
+        | boost for the day. You will be cycling mostly on tarmac ,only two distances
+        | on unpaved road, and you will enjoy a downhill ride of 30 km that consists of
+        | minimum uphills.
+      p
+        | We meet early in the morning at our base in Trapezaki and we start driving
+        | up to mountain Ainos. As we go higher the views get better and better since
+        | we reach the highest peak of Mount Ainos, 1620 m. Mount Ainos is a National
+        | Park and is covered with Greek fir and black pine. From there we can admire
+        | the view that literally takes your breath away! We start cycling in the National
+        | Park and down to Saint Gerasimos valley. After stopping several times to
+        | admire the views and take photos , we cycle through vineyards and we reach
+        | Old Valsamata village ,where we stop to see the ruins of the village that was
+        | destroyed after the earthquake of 1953. We leave the village and we cycle to
+        | Saint Gerasimos monastery . The monastery is definitely a place worth
+        | visiting!From here , there is a road skirting Mount Ainos and finishing up at
+        | Vlahata village and our base.
+
   section#services.page-section
     .container
       h2.text-center.mt-0 Our Bikes
       hr.divider.my-4.mx-auto
       .d-flex.align-items-top.justify-content-center
-        each bicycle in bicycles.items
-          .intro-item.mx-2
-            img.rounded.img-fluid.mb-4(src=bicycle.image alt=bicycle.title)
+      each bicycle in bicycles.items
+        .row.mb-4
+          .col-4
+            img.img-fluid(src=bicycle.image alt=bicycle.title)
+          .col-8
             .lead #{bicycle.title}
-            p.intro-description #{bicycle.description}
-      .row
-        .col-md-7
-          h4.lead Prices
-          .card
-            table.table.mb-0
-              thead
-                tr
-                  td &nbsp;
-                  td.text-center Cube AimPro
-                  td.text-center Ideal Nergetic
-                  td.text-center Ideal Citylife
-              tbody
-                tr
-                  th.text-end 1 day
-                  td.text-center 15 &euro;
-                  td.text-center 10&euro;
-                  td.text-center 10&euro;
-                tr
-                  th.text-end 2 days
-                  td.text-center 30&euro;
-                  td.text-center 20&euro;
-                  td.text-center 20&euro;
-                tr
-                  th.text-end 3 days
-                  td.text-center 45&euro;
-                  td.text-center 30&euro;
-                  td.text-center 30&euro;
-                tr
-                  th.text-end 4 days
-                  td.text-center 60&euro;
-                  td.text-center 40&euro;
-                  td.text-center 40&euro;
-                tr
-                  th.text-end 5 days
-                  td.text-center 70&euro;
-                  td.text-center 48&euro;
-                  td.text-center 48&euro;
-                tr
-                  th.text-end 6 days
-                  td.text-center 80&euro;
-                  td.text-center 56&euro;
-                  td.text-center 56&euro;
-                tr
-                  th.text-end 7 days
-                  td.text-center 90&euro;
-                  td.text-center 64&euro;
-                  td.text-center 64&euro;
-                tr
-                  th.text-end extra day
-                  td.text-center 10&euro;
-                  td.text-center 8&euro;
-                  td.text-center 8&euro;
+            .fw-bold #{bicycle.subtitle}
+            p.text-muted #{bicycle.description}
+  section#services.page-section
+    .container
+      h2.text-center.mt-0 Prices
+      .card.mt-2
+        table.table.mb-0
+          thead
+            tr
+              th(style='width:200px') &nbsp;
+              th.text-center Mountain (AimPro)
+              th.text-center Trekking (Nergetic/Citylife)
+              th.text-center Electric (Reaction/Keram)
+          tbody
+            tr
+              th.text-end 1 day
+              td.text-center 20&euro;
+              td.text-center 15 &euro;
+              td.text-center 40&euro;
+            tr
+              th.text-end 2 days
+              td.text-center 40&euro;
+              td.text-center 30&euro;
+              td.text-center 80&euro;
+            tr
+              th.text-end 3 days
+              td.text-center 60&euro;
+              td.text-center 45&euro;
+              td.text-center 120&euro;
+            tr
+              th.text-end 4 days
+              td.text-center 80&euro;
+              td.text-center 60&euro;
+              td.text-center 160&euro;
+            tr
+              th.text-end extra day
+              td.text-center 15&euro;
+              td.text-center 10&euro;
+              td.text-center 30&euro;
 
-        .col-md-5
-          h4.lead Extras
-          .card
-            table.table.mb-0
-              tbody
-                tr
-                  th.text-end(style='width:200px') baby seat for bike
-                  td 2&euro;/day
-                tr
-                  th.text-end(style='width:200px') side bag
-                  td 1&euro;/day
-                tr
-                  th.text-end(style='width:200px') helmet
-                  td free
-                tr
-                  th.text-end(style='width:200px') bike lock
-                  td free
-                tr
-                  th.text-end(style='width:200px') inner tube
-                  td free
-                tr
-                  th.text-end(style='width:200px') tool change
-                  td free
-                tr
-                  th.text-end(style='width:200px') led lights
-                  td free
-                tr
-                  th.text-end(style='width:200px') hand air pump
-                  td free
-                tr
-                  th.text-end(style='width:200px') bottle cage
-                  td free
+      .card.mt-2
+        table.table.mb-0
+          thead
+            tr
+              th.text-end(style='width:200px') Extra
+              th Price
+          tbody
+            tr
+              th.text-end baby seat for bike:
+              td 2&euro;/day
+            tr
+              th.text-end side bag:
+              td 1&euro;/day
+            tr
+              th.text-end helmet:
+              td free
+            tr
+              th.text-end bike lock:
+              td free
+            tr
+              th.text-end inner tube:
+              td free
+            tr
+              th.text-end tool change:
+              td free
+            tr
+              th.text-end led lights:
+              td free
+            tr
+              th.text-end hand air pump:
+              td free
+            tr
+              th.text-end bottle cage:
+              td free
   .text-center
     img.img-fluid(src='/img/banners/03.jpg' alt='')
 
